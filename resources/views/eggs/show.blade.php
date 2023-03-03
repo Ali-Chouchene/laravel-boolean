@@ -18,8 +18,17 @@
             <p>Size: <strong>{{$egg->size}}</strong></p>
         </div>
     </div>
-    <a class="btn btn-primary" href="{{route('home')}}">Go back</a>
-    <a class="btn btn-secondary ms-2" href="{{route('eggs.edit', $egg->id)}}">Edit</a>
+    <div class="d-flex">
+        <a class="btn btn-primary" href="{{route('home')}}">Go back</a>
+        <a class="btn btn-secondary ms-2" href="{{route('eggs.edit', $egg->id)}}">Edit</a>
+        <form action="{{route('eggs.destroy' , $egg->id)}}" method="POST">
+            @method('DELETE')
+            @csrf
+            <button class="btn btn-danger ms-2">Delete</button>
+        </form>
+    </div>
+
+
 
 </div>
 @endsection

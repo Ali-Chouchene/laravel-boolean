@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{$egg->name}}</h5>
                     <p class="card-text">{{$egg->chocolate_type}}</p>
-                    <a href="{{route('eggs.show', $egg->id)}}" class="btn btn-primary">Go somewhere</a>
+                    <a href="{{route('eggs.show', $egg->id)}}" class="btn btn-primary">More Info</a>
                 </div>
             </div>
         </div>
