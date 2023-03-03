@@ -4,7 +4,7 @@
     <div class="card mb-3">
         <img src="{{$egg->main_thumb}}" class="card-img-top" alt="{{$egg->name}}" height="500 px">
         <div class="card-body">
-            <h1 class="card-title text-primary fw-bold fst-italic">{{$egg->name}}</h1>
+            <h1 class="card-title fw-bold fst-italic mt-3" style="color: {{$egg->color}};">{{$egg->name}}</h1>
             <div class="d-flex align-items-center">
                 <p class="card-text m-0 me-3">Description: {{$egg->content}}</p>
                 <img id="thumb" class="img-fluid" src="{{$egg->content_thumb}}" alt="">

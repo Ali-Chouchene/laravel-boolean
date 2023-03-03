@@ -22,7 +22,7 @@ class EggController extends Controller
      */
     public function create()
     {
-        //
+        return view('eggs.create');
     }
 
     /**
@@ -30,7 +30,15 @@ class EggController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $egg = new Egg();
+
+        $egg->fill($data);
+
+        $egg->save();
+
+        return redirect()->route('eggs.show', $egg->id);
     }
 
     /**

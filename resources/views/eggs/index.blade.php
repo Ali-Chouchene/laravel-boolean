@@ -2,6 +2,9 @@
 
 @section('content')
 <div class="container py-5">
+    <div class="text-center py-3">
+        <a class="btn btn-success" href="{{route('eggs.create')}}">Add new egg</a>
+    </div>
     <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
         @foreach($eggs as $egg)
         <div class="col">
