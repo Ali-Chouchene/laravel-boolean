@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Egg;
 use Illuminate\Http\Request;
 
 class EggController extends Controller
@@ -11,7 +12,9 @@ class EggController extends Controller
      */
     public function index()
     {
-        //
+        $eggs = Egg::all();
+        // dd($eggs);
+        return view('eggs.index', compact('eggs'));
     }
 
     /**
@@ -33,9 +36,10 @@ class EggController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Egg $egg)
     {
-        //
+
+        return view('eggs.show', compact('egg'));
     }
 
     /**
