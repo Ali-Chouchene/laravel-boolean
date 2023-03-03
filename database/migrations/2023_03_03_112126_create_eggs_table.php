@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('content');
             $table->text('content_thumb')->nullable();
             $table->string('chocolate_type');
-            $table->enum('size', ['big', 'small', 'medium']);
+            $table->string('size');
             $table->text('main_thumb')->nullable();
             $table->timestamps();
         });
