@@ -19,5 +19,7 @@
         </div>
     </div>
     <a class="btn btn-primary" href="{{route('home')}}">Go back</a>
+    <a class="btn btn-secondary ms-2" href="{{route('eggs.edit', $egg->id)}}">Edit</a>
+
 </div>
 @endsection

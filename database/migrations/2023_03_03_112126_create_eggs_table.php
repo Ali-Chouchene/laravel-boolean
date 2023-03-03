@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('eggs', function (Blueprint $table) {
             $table->id();
             $table->string('name', 40);
-            $table->string('color', 30)->unique();
+            $table->string('color', 30);
             $table->string('content');
             $table->text('content_thumb')->nullable();
             $table->string('chocolate_type');

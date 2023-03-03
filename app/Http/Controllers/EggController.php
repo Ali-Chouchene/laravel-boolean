@@ -55,7 +55,8 @@ class EggController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $egg = Egg::findOrFail($id);
+        return view('eggs.edit', compact('egg'));
     }
 
     /**
@@ -63,7 +64,13 @@ class EggController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->all();
+        $newEgg = new Egg();
+
+        $newEgg->fill($data);
+        $newEgg->save();
+
+        return redirect()->route('eggs.show', $newEgg->id);
     }
 
     /**
